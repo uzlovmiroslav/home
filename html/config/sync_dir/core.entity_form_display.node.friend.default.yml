@@ -1,0 +1,47 @@
+uuid: a586a8fd-75dc-4ef5-a975-3f046df859fa
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.friend.field_birthday_date
+    - field.field.node.friend.field_first_name
+    - field.field.node.friend.field_second_name
+    - node.type.friend
+  module:
+    - datetime
+id: node.friend.default
+targetEntityType: node
+bundle: friend
+mode: default
+content:
+  field_birthday_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_first_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_second_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

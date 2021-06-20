@@ -1,0 +1,14 @@
+uuid: d19b79af-5756-4829-ba3b-470841f0ec9c
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Анонимный пользователь'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access site-wide contact form'
+  - 'search content'

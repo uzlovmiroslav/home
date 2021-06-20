@@ -1,0 +1,20 @@
+uuid: 7a73c6c7-cbe5-4bf3-bd85-d9e6b1d4e9b9
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Аутентифицированный пользователь'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'create friend content'
+  - 'delete own friend content'
+  - 'edit own friend content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'

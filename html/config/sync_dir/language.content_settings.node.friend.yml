@@ -1,0 +1,11 @@
+uuid: 217904ce-1bcb-41ae-9020-3f6a15965929
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.friend
+id: node.friend
+target_entity_type_id: node
+target_bundle: friend
+default_langcode: site_default
+language_alterable: false

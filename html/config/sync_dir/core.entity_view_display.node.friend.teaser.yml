@@ -1,0 +1,23 @@
+uuid: 31d69d7a-ef40-498c-99c8-1f52efd7d5ec
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.friend.field_birthday_date
+    - field.field.node.friend.field_first_name
+    - field.field.node.friend.field_second_name
+    - node.type.friend
+  module:
+    - user
+id: node.friend.teaser
+targetEntityType: node
+bundle: friend
+mode: teaser
+content: {  }
+hidden:
+  field_birthday_date: true
+  field_first_name: true
+  field_second_name: true
+  langcode: true
+  links: true

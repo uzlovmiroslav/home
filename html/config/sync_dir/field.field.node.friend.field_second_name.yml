@@ -1,0 +1,19 @@
+uuid: dd00b056-5665-4794-9bf2-807b17987aa0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_second_name
+    - node.type.friend
+id: node.friend.field_second_name
+field_name: field_second_name
+entity_type: node
+bundle: friend
+label: Фамилия
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+uuid: aec890ac-bf5d-47dd-854a-fb27ef721536
+name: 'Happy Birthday!'
+mail: igor.uzlov@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /list
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: ru
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''

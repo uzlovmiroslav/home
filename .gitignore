@@ -1,0 +1,7 @@
+.idea/
+mutagen.yml.lock
+
+# Ignore paths that contain generated content.
+html/web/sites/default/files/*
+!html/web/sites/default/files/translations/
+!html/web/sites/default/files/.htaccess

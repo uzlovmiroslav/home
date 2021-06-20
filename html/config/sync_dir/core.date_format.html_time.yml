@@ -1,0 +1,10 @@
+uuid: d30c3c07-0b6d-439b-9227-fbbd42834ad5
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M7yqicYkU36hRy5p9drAaGBBihhUD1OyujFrAaQ93ZE
+id: html_time
+label: 'HTML Время'
+locked: true
+pattern: 'H:i:s'

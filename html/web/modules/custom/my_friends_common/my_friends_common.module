@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Contains my_friends_common.module.
+ */
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
+function my_friends_common_node_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  $access_result = AccessResult::neutral();
+  $entity_type = $entity->getType();
+  $roles = $account->getRoles();
+
+  // Disable access to view for some cases.
+  if ($operation === 'view') {
+    switch (TRUE) {
+      case !in_array('administrator', $roles):
+        // Allow access to view ONLY own content type "Friend" for user without role "administrator".
+        $access_result = AccessResult::forbiddenIf($entity_type === 'friend' && $account->id() !== $entity->getOwnerId());
+        break;
+    }
+  }
+
+  return $access_result->isNeutral() ? $access_result : $access_result->addCacheableDependency($entity)->cachePerUser();
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function my_friends_common_form_node_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  switch (TRUE) {
+    // Alter only for edit form CT Friend.
+    case in_array($form_id, ['node_friend_edit_form', 'node_friend_form']):
+      $form['revision_information']['#access'] = FALSE;
+      break;
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function my_friends_common_views_data_alter(array &$data) {
+  $data['views']['days_to_date_field'] = [
+    'title' => t('Days to date'),
+    'help' => t('The custom field for calculate the number of days to date in future.'),
+    'field' => [
+      'id' => 'days_to_date_field',
+    ],
+  ];
+}

@@ -1,0 +1,5 @@
+name: My Friends Common
+type: module
+description: Common and basic functionality for My Friends project.
+core_version_requirement: ^8.8 || ^9
+package: My Friends

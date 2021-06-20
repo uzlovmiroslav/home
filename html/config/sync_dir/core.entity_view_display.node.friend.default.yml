@@ -1,0 +1,45 @@
+uuid: 23636caa-8909-464f-9057-de9f3c6dbaa0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.friend.field_birthday_date
+    - field.field.node.friend.field_first_name
+    - field.field.node.friend.field_second_name
+    - node.type.friend
+  module:
+    - datetime
+    - user
+id: node.friend.default
+targetEntityType: node
+bundle: friend
+mode: default
+content:
+  field_birthday_date:
+    weight: 2
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: short_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_first_name:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_second_name:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  links: true

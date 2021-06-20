@@ -1,0 +1,18 @@
+uuid: 21d01652-3a71-4173-b760-e19ef0c57bff
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.friend
+id: node.friend.title
+field_name: title
+entity_type: node
+bundle: friend
+label: 'Имя и фамилия'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

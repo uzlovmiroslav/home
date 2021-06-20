@@ -1,0 +1,27 @@
+uuid: 20597ef5-75c6-41f1-b7a4-5d1e989074be
+langcode: ru
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - bartik
+id: login
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: Вход
+  provider: user
+  label_display: visible
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

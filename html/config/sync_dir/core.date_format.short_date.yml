@@ -1,0 +1,8 @@
+uuid: ed4552c4-3f3c-439d-a00d-33f95598fc81
+langcode: ru
+status: true
+dependencies: {  }
+id: short_date
+label: 'Короткая дата'
+locked: false
+pattern: d/m/Y
